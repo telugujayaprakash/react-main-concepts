@@ -1,0 +1,24 @@
+{
+  "votes": [
+    {
+      "id": "86d4",
+      "person": "Michelle Williams",
+      "category": "Best female Actor"
+    },
+    {
+      "id": "21eb",
+      "person": "Sienna Lane",
+      "category": "Best Male Actor"
+    },
+    {
+      "id": "cf3c",
+      "person": "Sienna Lane",
+      "category": "Best Male Actor"
+    },
+    {
+      "id": "ee75",
+      "person": "David Brown",
+      "category": "Best Male Actor"
+    }
+  ]
+}
