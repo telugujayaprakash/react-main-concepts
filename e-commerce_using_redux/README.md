@@ -1,0 +1,1 @@
+# redux-thunk is middleware that helps to return function in a plain js object(in action while fetchin api cals mostly and helps in other logic)
