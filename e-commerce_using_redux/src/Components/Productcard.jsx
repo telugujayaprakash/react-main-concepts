@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Navbar from './navbar'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addtocart } from '../Redux/Products/ProductActions.js'
 
-function ProductCard () {
+function ProductCard() {
   const { id } = useParams()
+  const dispatch = useDispatch()
   const [productDetails, setProductDetails] = useState(null)
 
   useEffect(() => {
-    async function fetchProductDetails () {
+    async function fetchProductDetails() {
       const res = await fetch(`https://fakestoreapi.com/products/${id}`)
       const data = await res.json()
       setProductDetails(data)
@@ -53,9 +56,13 @@ function ProductCard () {
           <p className='card-text fw-bold text-success mb-2'>
             ${productDetails.price}
           </p>
-          <Link to={'/'} className='btn btn-outline-primary btn-sm'>
+          <button
+            className='btn btn-outline-primary btn-sm'
+            onClick={() => dispatch(addtocart(productDetails))}
+            style={{ marginLeft: '10px' }}
+          >
             Add to cart
-          </Link>
+          </button>
         </div>
       </div>
     </div>
