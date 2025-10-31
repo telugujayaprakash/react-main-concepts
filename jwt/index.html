@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <button onclick="login()">login</button>
     <button onclick="profile()">profile</button>
     <script>
-        const url="http://localhost:8000/"
-        async function login(){
-            const response=await fetch(url+"login")
-            const data = await response.json()
-            localStorage.setItem("token",data)
-            console.log("Token Successfully created");
-        }
-        async function profile(){
-            const response=await fetch(url+"profile",{
-                headers:{Authorization:localStorage.getItem("token")}
-            })
-            const data = await response
-            console.log("claims:",data)
-            console.log("token successfully verified");
-        }
+      const url = 'http://localhost:8000/'
+      async function login() {
+        const response = await fetch(url + 'login')
+        const data = await response.json()
+        localStorage.setItem('token', data.token)
+        console.log('Token Successfully created')
+      }
+      async function profile() {
+        const jwttoken = localStorage.getItem('token')
+        const response = await fetch(url + 'profile', {
+          headers: { Authorization: `Bearer ${jwttoken}` }
+        })
+        const data = await response
+        console.log('claims:', data)
+        console.log('token successfully verified')
+      }
     </script>
-</body>
+  </body>
 </html>

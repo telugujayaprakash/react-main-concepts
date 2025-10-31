@@ -41,7 +41,7 @@ app.post('/', async (req, res) => {
   try {
     const newMovie = new movies({ title: title, desc: disc });
     await newMovie.save();
-    const ifEp = await endpoints.findOne({ endpoint: Ep.endpoint });
+    const ifEp = await endpoints.findOne({ endpoint: Ep });
     if (!ifEp) {
       console.log("already exists");
       const newEndpoint = new endpoints({ endpoint: Ep });

@@ -44,7 +44,6 @@ function App() {
         />
         <button type="submit">Upload</button>
       </form>
-
       <h2>here the data</h2>
     </div>
   );

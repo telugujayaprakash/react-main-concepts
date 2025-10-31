@@ -5,11 +5,11 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    desc:{
+    desc: {
         type: String,
         required: true
     }
-});
+}, { timestamps: true });
 
 const Movie = mongoose.model('Movie', movieSchema);
 module.exports = Movie;
