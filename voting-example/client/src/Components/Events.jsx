@@ -139,8 +139,21 @@ export default function EventsPage() {
         "Best Entertainer Female",
         "Best Performer Male",
         "Best Performer Female",
-        "Best Singer",
-        "Best Writer",
+        "Best Villan",
+        "Best Comedian",
+        "Best Writer (story&Screenplay)",
+        "Best Creator(Director)",
+        "Best Cinema (Banner)",
+        "Best Music",
+        "Best Lyrics",
+        "Best Singer Male",
+        "Best Singer Female",
+        "Best Editor",
+        "Best Action Director",
+        "Best Cinematographer",
+        "Best Choreographer",
+        "Best Art Director",
+
     ];
     const newsCategories = ["Best News", "Best Reporter", "Best Anchor"];
     const seriesCategories = [

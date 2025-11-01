@@ -25,10 +25,6 @@ const VotingSchema = new mongoose.Schema({
             }
         })
     },
-    votes: {
-        type: Number,
-        default: 0,
-    }
 });
 
 const VotingData = mongoose.model("VotingData", VotingSchema);
